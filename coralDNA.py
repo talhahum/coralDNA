@@ -2,6 +2,7 @@ def ncheck(n):
     if n < 0:
         return "The number must be positive."
 
+
 def factorial(n):
     num = 1
     while n >= 1:
@@ -10,12 +11,14 @@ def factorial(n):
     return num
 
 
-from math import sqrt
-def fibonacci(n):
-    else:
-        return ((1+sqrt(5))**n-(1-sqrt(5))**n)/(2**n*sqrt(5))
+def fib(n):
+    fib_1, fib_2 = 0, 1
+    for tmp_fib in range(n):
+        tmp_fib = fib_1
+        fib_1 = fib_1 + fib_2
+        fib_2 = tmp_fib
+        print(fib_1)
 
-
-ncheck()
-print(factorial(300))
-print(fibonacci(-1))
+ncheck(n)
+factorial(6)
+fib(6)
